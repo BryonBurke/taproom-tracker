@@ -25,4 +25,4 @@ REQUIREMENTS:
 |  |  |  |
 
 License: MIT
-Bryon Burke
+Bryon Burke 2020
