@@ -12,6 +12,8 @@ function KegList(){
   const navstyle ={
     backgroundColor: 'lightblue',
     padding: '40px',
+    borderRadius: '30px',
+    marginLeft: '10px'
 
   }
 
@@ -27,17 +29,17 @@ function KegList(){
 
       <div >
         <p style = {navstyle}>New Keg</p>
-        <p style = {navstyle}>Employee</p>
-        <p style = {navstyle}>Patron</p>
-
       </div>
+
+
+
       <div>
         <p style = {fullstyle}></p>
       </div>
     </div>
 
 
-);
+  );
 }
 
 export default KegList;
