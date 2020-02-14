@@ -5,13 +5,19 @@ function KegList(){
   const pagegrid = {
     display:'grid',
     gridTemplateColumns: '1fr 8fr',
-    gridColumnGap: '10px',
+    gridColumnGap: '20px',
+    height: '100vh'
   }
 
-  const backstyle ={
+  const navstyle ={
     backgroundColor: 'lightblue',
-    height: '500px',
-    padding: '20px'
+    padding: '30px'
+  }
+
+  const fullstyle ={
+    backgroundColor: 'lightblue',
+    padding: '20px',
+    height: '100vh'
   }
 
 
@@ -19,10 +25,13 @@ function KegList(){
     <div style = {pagegrid}>
 
       <div >
-        <p style = {backstyle}></p>
+        <p style = {navstyle}>New Keg</p>
+        <p style = {navstyle}>Employee</p>
+        <p style = {navstyle}>Patron</p>
+
       </div>
       <div>
-        <p style = {backstyle}></p>
+        <p style = {fullstyle}></p>
       </div>
     </div>
 
