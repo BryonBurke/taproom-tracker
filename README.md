@@ -23,3 +23,5 @@ REQUIREMENTS:
 ||||
 |---|---|---|
 |  |  |  |
+
+License: MIT
