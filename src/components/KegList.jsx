@@ -4,14 +4,15 @@ function KegList(){
 
   const pagegrid = {
     display:'grid',
-    gridTemplateColumns: '1fr 8fr',
+    gridTemplateColumns: '1fr 9fr',
     gridColumnGap: '20px',
     height: '100vh'
   }
 
   const navstyle ={
     backgroundColor: 'lightblue',
-    padding: '30px'
+    padding: '40px',
+
   }
 
   const fullstyle ={
