@@ -25,6 +25,6 @@ REQUIREMENTS:
 |  |  |  |
 
 License: MIT
-Bryon Burke 2020 c
+Bryon Burke 2020 
 
 ![q diagram1](./src/images/taproom-component-diagram.png)
