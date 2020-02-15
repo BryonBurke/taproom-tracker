@@ -13,7 +13,7 @@ function App(){
     <Header/>
     <Switch>
     <Route exact path='/' component={KegList} />
-    <Route path='/newKeg' component={NewKeg} />
+    <Route path='/newkeg' component={NewKeg} />
     <Route path='/employee' component={Employee} />
     <Route path='/patron' component={Patron} />
     </Switch>
