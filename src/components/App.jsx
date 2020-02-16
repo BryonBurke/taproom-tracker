@@ -6,6 +6,7 @@ import NewKeg from './NewKeg';
 import Employee from './Employee';
 import Patron from './Patron';
 import EditKeg from './EditKeg';
+import Error404 from './Error404';
 
 
 function App(){
@@ -18,6 +19,7 @@ function App(){
     <Route path='/employee' component={Employee} />
     <Route path='/patron' component={Patron} />
     <Route path='/editkeg' component={EditKeg} />
+    <Route component={Error404} />
     </Switch>
     </div>
   );
