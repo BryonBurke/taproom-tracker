@@ -1,96 +1,68 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import Keg from './NewKeg'
+import NewKeg from './NewKeg'
 
-
-const pagegrid = {
-  display:'grid',
-  gridTemplateColumns: '1fr 9fr',
-  gridColumnGap: '20px',
-  height: '100vh'
-}
-const navstyle ={
-  backgroundColor: '#406aad',
-  borderRadius: '30px',
-  padding: '30px',
-  height: '20vh',
-  marginTop: '10px',
-  color:'white',
-  textAlign:'center'
-}
-const fullstyle ={
-  backgroundColor: 'lightblue',
-  padding: '20px',
-  height: '100vh'
-}
-const liststyle ={
-  listStyleType: 'none'
-}
-const fontstyle ={
-  fontFamily: 'Roboto',
-  fontSize:'3.5ex'
-}
 const masterKegList = [
   {
     name: 'Vortex',
     brand: 'Fort George',
     price: "6.00",
-    alcoholcontent: "3.5"
+    alcoholcontent: "3.5",
+    pintsRemaining:"124"
   },
   {
     name: 'Hefe',
     brand: 'Widmer',
     price: "6.00",
-    alcoholcontent: "5.0"
+    alcoholcontent: "5.0",
+    pintsRemaining:"124"
   },
 ];
 
+const columnHeadingStyles = {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
+};
+
+const locationStyles = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
+
+
+
+
 function KegList(){
   return (
+    <div >
+            <Link to ="/newkeg">New Keg</Link>
+            <Link to ="/employee">Employee</Link>
+            <Link to ="/patron">Patron</Link>
 
-    <div style={pagegrid}>
-      <div>
-        <ul style={liststyle}>
-          <li>
-            <Link to ="/newkeg" style={{ textDecoration: 'none'}}>
-              <div style = {navstyle}>
-                <p style={fontstyle}>New Keg</p>
-              </div>
-            </Link>
+          <div style={columnHeadingStyles}>
 
-          </li>
-          <li>
-            <Link to ="/employee" style={{ textDecoration: 'none'}}>
-              <div style = {navstyle}>
-                <p style={fontstyle}>Employee</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link to ="/patron" style={{ textDecoration: 'none'}}>
-              <div style = {navstyle}>
-                <p style={fontstyle}>Patron</p>
-              </div>
-            </Link>
-          </li>
-        </ul>
-      </div>
+<h3 style={locationStyles}>Name</h3>
+<h3 style={locationStyles}>Brand</h3>
+<h3 style={locationStyles}>Price</h3>
+<h3 style={locationStyles}>Alcohol Content</h3>
+<h3 style={locationStyles}>Pints Remaining</h3>
+          </div>
 
-
-      <div>
-        <p style={fullstyle}></p>
         {masterKegList.map((keg, index) => (
-          <Keg
+          <NewKeg
             name={keg.name}
             brand={keg.brand}
             price={keg.price}
-            alcoholconten={keg.alcoholcontent}
+            alcoholcontent ={keg.alcoholcontent}
+            pintsRemaining ={keg.pintsRemaining}
             key={index}
             />
         ))}
       </div>
 
-    </div>
+
   );
 }
 

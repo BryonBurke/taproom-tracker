@@ -1,72 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import NewKeg from './NewKeg'
 
-function Employee(){
+const masterKegList = [
+  {
+    name: 'Vortex',
+    brand: 'Fort George',
+    price: "6.00",
+    alcoholcontent: "3.5",
+    pintsRemaining:"124"
+  },
+  {
+    name: 'Hefe',
+    brand: 'Widmer',
+    price: "6.00",
+    alcoholcontent: "5.0",
+    pintsRemaining:"124"
+  },
+];
 
-  const pagegrid = {
-    display:'grid',
-    gridTemplateColumns: '1fr 9fr',
-    gridColumnGap: '20px',
-    height: '100vh'
-  }
-  const navstyle ={
-    backgroundColor: '#406aad',
-    borderRadius: '30px',
-    padding: '20px',
-    height: '20vh',
-    width:'150px',
-    marginTop: '10px',
-    color:'white',
-    textAlign:'center'
-  }
-  const fullstyle ={
-    backgroundColor: 'lightblue',
-    padding: '20px',
-    height: '100vh'
-  }
-  const liststyle ={
-    listStyleType: 'none'
-  }
 
-  const fontstyle ={
-    fontFamily: 'Roboto',
-    fontSize:'3.5ex'
-  }
-
+function KegList(){
   return (
+    <div >
+      <Link to ="/newkeg">New Keg</Link>
+      <Link to ="/employee">Employee</Link>
+      <Link to ="/patron">Patron</Link>
 
-    <div style={pagegrid}>
-
-      <ul style={liststyle}>
-        <li>
-          <Link to ="/newkeg" style={{ textDecoration: 'none'}}>
-            <div style = {navstyle}>
-              <p style={fontstyle}>New Keg</p>
-            </div>
-          </Link>
-
-        </li>
-        <li>
-          <Link to ="/" style={{ textDecoration: 'none'}}>
-            <div style = {navstyle}>
-              <p style={fontstyle}>Keg List</p>
-            </div>
-          </Link>
-        </li>
-        <li>
-          <Link to ="/patron" style={{ textDecoration: 'none'}}>
-            <div style = {navstyle}>
-              <p style={fontstyle}>Patron</p>
-            </div>
-          </Link>
-        </li>
-      </ul>
-
-      <div>
-        <p style = {fullstyle}></p>
-      </div>
+      {masterKegList.map((keg, index) => (
+        <NewKeg
+          name={keg.name}
+          brand={keg.brand}
+          price={keg.price}
+          alcoholcontent ={keg.alcoholcontent}
+          pintsRemaining ={keg.pintsRemaining}
+          key={index}
+          />
+      ))}
     </div>
+
+
   );
 }
 
-export default Employee;
+export default KegList;
