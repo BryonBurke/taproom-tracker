@@ -20,6 +20,8 @@ const masterKegList = [
 ];
 
 
+
+
 function KegList(){
   return (
     <div >
@@ -31,8 +33,6 @@ function KegList(){
         <NewKeg
           name={keg.name}
           brand={keg.brand}
-          price={keg.price}
-          alcoholcontent ={keg.alcoholcontent}
           pintsRemaining ={keg.pintsRemaining}
           key={index}
           />

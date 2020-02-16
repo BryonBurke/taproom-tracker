@@ -24,7 +24,7 @@ const columnHeadingStyles = {
   gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
 };
 
-const locationStyles = {
+const headinglocationStyles = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -34,33 +34,35 @@ const locationStyles = {
 
 
 
+
+
 function KegList(){
   return (
     <div >
-            <Link to ="/newkeg">New Keg</Link>
-            <Link to ="/employee">Employee</Link>
-            <Link to ="/patron">Patron</Link>
+      <Link to ="/newkeg">New Keg</Link>
+      <Link to ="/employee">Employee</Link>
+      <Link to ="/patron">Patron</Link>
 
-          <div style={columnHeadingStyles}>
+      <div style={columnHeadingStyles}>
 
-<h3 style={locationStyles}>Name</h3>
-<h3 style={locationStyles}>Brand</h3>
-<h3 style={locationStyles}>Price</h3>
-<h3 style={locationStyles}>Alcohol Content</h3>
-<h3 style={locationStyles}>Pints Remaining</h3>
-          </div>
-
-        {masterKegList.map((keg, index) => (
-          <NewKeg
-            name={keg.name}
-            brand={keg.brand}
-            price={keg.price}
-            alcoholcontent ={keg.alcoholcontent}
-            pintsRemaining ={keg.pintsRemaining}
-            key={index}
-            />
-        ))}
+        <h3 style={headinglocationStyles}>Name</h3>
+        <h3 style={headinglocationStyles}>Brand</h3>
+        <h3 style={headinglocationStyles}>Price</h3>
+        <h3 style={headinglocationStyles}>Alcohol Content</h3>
+        <h3 style={headinglocationStyles}>Pints Remaining</h3>
       </div>
+
+      {masterKegList.map((keg, index) => (
+        <NewKeg
+          name={keg.name}
+          brand={keg.brand}
+          price={keg.price}
+          alcoholcontent ={keg.alcoholcontent}
+          pintsRemaining ={keg.pintsRemaining}
+          key={index}
+          />
+      ))}
+    </div>
 
 
   );
