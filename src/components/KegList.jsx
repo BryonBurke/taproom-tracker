@@ -10,11 +10,13 @@ function KegList(){
     height: '100vh'
   }
   const navstyle ={
-    backgroundColor: 'lightblue',
+    backgroundColor: '#406aad',
     borderRadius: '30px',
-    padding: '20px',
+    padding: '30px',
     height: '20vh',
-    marginTop: '10px'
+    marginTop: '10px',
+    color:'white',
+    textAlign:'center'
   }
   const fullstyle ={
     backgroundColor: 'lightblue',
@@ -25,6 +27,11 @@ function KegList(){
     listStyleType: 'none'
   }
 
+  const fontstyle ={
+    fontFamily: 'Roboto',
+    fontSize:'3.5ex'
+  }
+
   return (
 
     <div style={pagegrid}>
@@ -33,7 +40,7 @@ function KegList(){
         <li>
           <Link to ="/newkeg" style={{ textDecoration: 'none'}}>
             <div style = {navstyle}>
-              <p >New Keg</p>
+              <p style={fontstyle}>New Keg</p>
             </div>
           </Link>
 
@@ -41,14 +48,14 @@ function KegList(){
         <li>
           <Link to ="/employee" style={{ textDecoration: 'none'}}>
             <div style = {navstyle}>
-              <p >Employee</p>
+              <p style={fontstyle}>Employee</p>
             </div>
           </Link>
         </li>
         <li>
           <Link to ="/patron" style={{ textDecoration: 'none'}}>
             <div style = {navstyle}>
-              <p >Patron</p>
+              <p style={fontstyle}>Patron</p>
             </div>
           </Link>
         </li>

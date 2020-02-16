@@ -5,6 +5,7 @@ import KegList from './KegList';
 import NewKeg from './NewKeg';
 import Employee from './Employee';
 import Patron from './Patron';
+import EditKeg from './EditKeg';
 
 
 function App(){
@@ -16,6 +17,7 @@ function App(){
     <Route path='/newkeg' component={NewKeg} />
     <Route path='/employee' component={Employee} />
     <Route path='/patron' component={Patron} />
+    <Route path='/editkeg' component={EditKeg} />
     </Switch>
     </div>
   );

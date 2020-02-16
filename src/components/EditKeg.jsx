@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-function Employee(){
+function EditKeg(){
 
   const pagegrid = {
     display:'grid',
@@ -12,9 +12,8 @@ function Employee(){
   const navstyle ={
     backgroundColor: '#406aad',
     borderRadius: '30px',
-    padding: '20px',
+    padding: '30px',
     height: '20vh',
-    width:'150px',
     marginTop: '10px',
     color:'white',
     textAlign:'center'
@@ -39,27 +38,14 @@ function Employee(){
 
       <ul style={liststyle}>
         <li>
-          <Link to ="/newkeg" style={{ textDecoration: 'none'}}>
-            <div style = {navstyle}>
-              <p style={fontstyle}>New Keg</p>
-            </div>
-          </Link>
-
-        </li>
-        <li>
           <Link to ="/" style={{ textDecoration: 'none'}}>
             <div style = {navstyle}>
               <p style={fontstyle}>Keg List</p>
             </div>
           </Link>
+
         </li>
-        <li>
-          <Link to ="/patron" style={{ textDecoration: 'none'}}>
-            <div style = {navstyle}>
-              <p style={fontstyle}>Patron</p>
-            </div>
-          </Link>
-        </li>
+
       </ul>
 
       <div>
@@ -69,4 +55,4 @@ function Employee(){
   );
 }
 
-export default Employee;
+export default EditKeg;
