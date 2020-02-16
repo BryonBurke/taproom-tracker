@@ -35,8 +35,6 @@ function NewKeg(props){
   return (
 
       <div style={layoutStyles}>
-
-
         <div style={locationStyles}>
           <p>{props.name}</p>
         </div>

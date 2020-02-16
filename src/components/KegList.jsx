@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NewKeg from './NewKeg'
 
 const masterKegList = [
@@ -38,10 +39,14 @@ const headinglocationStyles = {
 
 function KegList(){
   return (
+
+
     <div >
-      <Link to ="/newkeg">New Keg</Link>
-      <Link to ="/employee">Employee</Link>
-      <Link to ="/patron">Patron</Link>
+      <ul>
+        <li><Link to ="/newkeg">New Keg</Link></li>
+        <li><Link to ="/employee">Employee</Link></li>
+        <li><Link to ="/patron">Patron</Link></li>
+      </ul>
 
       <div style={columnHeadingStyles}>
 
