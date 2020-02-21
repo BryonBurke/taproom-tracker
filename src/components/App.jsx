@@ -10,18 +10,37 @@ import EditKeg from './EditKeg';
 import Error404 from './Error404';
 
 
-function App(){
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterKegList: []
+    };
+    this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+  }
+
+  handleAddingNewKegToList(newKeg){
+
+  }
+
+  handleAddingNewKegToList(newTicket){
+    var newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.push(newKeg);
+    this.setState({masterKegList: newMasterKegList});
+  }
+
   return (
     <div>
-    <Header/>
-    <Switch>
-    <Route exact path='/' component={KegList} />
-    <Route path='/newkeg' component={NewKegControl} />
-    <Route path='/employee' component={Employee} />
-    <Route path='/patron' component={Patron} />
-    <Route path='/editkeg' component={EditKeg} />
-    <Route component={Error404} />
-    </Switch>
+      <Header/>
+      <Switch>
+        <Route exact path='/' component={KegList} />
+                <Route path='/newkeg' render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
+        <Route path='/employee' component={Employee} />
+        <Route path='/patron' component={Patron} />
+        <Route path='/editkeg' component={EditKeg} />
+        <Route component={Error404} />
+      </Switch>
     </div>
   );
 }
