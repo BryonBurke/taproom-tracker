@@ -10,10 +10,10 @@ class NewKegControl extends React.Component {
   this.state = {
     formVisibleOnPage: false
   };
-    this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
+    this.handleAuthorizeConfirmation = this.handleAuthorizeConfirmation.bind(this);
 }
 
-handleTroubleshootingConfirmation(){
+handleAuthorizeConfirmation(){
   this.setState({formVisibleOnPage: true});
 }
 
@@ -22,7 +22,7 @@ render(){
   if (this.state.formVisibleOnPage){
     currentlyVisibleContent = <NewKegForm />;
   } else {
-    currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
+    currentlyVisibleContent = <ConfirmationQuestions onAuthorizeConfirmation={this.handleAuthorizeConfirmation}/>;
   }
   return (
     <div>
