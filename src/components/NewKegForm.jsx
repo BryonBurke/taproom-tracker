@@ -1,26 +1,48 @@
 import React from 'react';
 
 function NewKegForm(){
+  let _name = null;
+  let _brand = null;
+  let _price = null;
+  let _alcoholContent = null;
+
+
+  function handleNewKegFormSubmission(event) {
+    event.preventDefault();
+    console.log(_name.value);
+    console.log(_brand.value);
+    console.log(_price.value);
+    console.log(_alcoholContent.value);
+    _name.value = '';
+    _brand.value = '';
+    _price.value = '';
+    _alcoholContent.value = '';
+  }
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleNewKegFormSubmission}>
         <input
           type='text'
-          id='names'
-          placeholder='Name'/>
+          id='name'
+          placeholder='Name'
+          ref={(input) => {_name = input;}}/>
         <input
           type='text'
           id='brand'
-          placeholder='Brand'/>
-          <input
-            type='number'
-            id='price'
-            placeholder='Price'/>
-            <input
-              type='text'
-              id='alcoholContent'
-              placeholder='Alcohol Content'/>
-        <button type='submit'>Help!</button>
+          placeholder='Brand'
+          ref={(input) => {_brand = input;}}/>/>
+        <input
+          type=' text'
+          id='price'
+          placeholder='Price'
+          ref={(input) => {_price = input;}}/>/>
+        <input
+          type='text'
+          id='alcoholContent'
+          placeholder='Alcohol Content'
+          ref={(input) => {_alcoholContent = input;}}/>/>
+        <button type='submit'>Add new keg</button>
       </form>
     </div>
   );
