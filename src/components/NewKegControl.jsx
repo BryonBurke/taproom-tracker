@@ -1,4 +1,6 @@
 import React from 'react';
+import ConfirmationQuestions from './ConfirmationQuestions';
+
 
 class NewKegControl extends React.Component {
 
