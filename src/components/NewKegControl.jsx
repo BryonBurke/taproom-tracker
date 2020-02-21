@@ -7,15 +7,22 @@ class NewKegControl extends React.Component {
   this.state = {
     formVisibleOnPage: false
   };
+  this.handleClick = this.handleClick.bind(this);
 }
 
-  render(){
-    return (
-      <div>
-        <p>This is the NewKegControl component!</p>
-      </div>
-    );
-  }
+handleClick(){
+  this.setState({formVisibleOnPage: true});
+  console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
+}
+
+render(){
+  return (
+    <div>
+      <p>This is the NewKegControl component!</p>
+      <strong onClick={this.handleClick}>Click me to change my state!</strong>
+    </div>
+  );
+}
 }
 
 export default NewKegControl;
