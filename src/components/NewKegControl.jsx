@@ -21,7 +21,7 @@ handleAuthorizeConfirmation(){
 render(){
   let currentlyVisibleContent = null;
   if (this.state.formVisibleOnPage){
-    currentlyVisibleContent = <NewKegForm />;
+    currentlyVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation}/>;
   } else {
     currentlyVisibleContent = <ConfirmationQuestions onAuthorizeConfirmation={this.handleAuthorizeConfirmation}/>;
   }

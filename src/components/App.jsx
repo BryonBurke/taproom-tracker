@@ -20,22 +20,21 @@ class App extends React.Component {
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
   }
 
+
   handleAddingNewKegToList(newKeg){
-
-  }
-
-  handleAddingNewKegToList(newTicket){
     var newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
   }
 
+  render(){
+
   return (
     <div>
       <Header/>
       <Switch>
-        <Route exact path='/' component={KegList} />
-                <Route path='/newkeg' render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
+         <Route exact path='/' render={()=><KegList KegList={this.state.masterKegList} />} />
+        <Route path='/newkeg' render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
         <Route path='/employee' component={Employee} />
         <Route path='/patron' component={Patron} />
         <Route path='/editkeg' component={EditKeg} />
@@ -43,6 +42,8 @@ class App extends React.Component {
       </Switch>
     </div>
   );
+}
+
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function NewKegForm(){
+function NewKegForm(props){
   let _name = null;
   let _brand = null;
   let _price = null;
@@ -10,10 +10,8 @@ function NewKegForm(){
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    console.log(_name.value);
-    console.log(_brand.value);
-    console.log(_price.value);
-    console.log(_alcoholContent.value);
+
+    props.onNewTicketCreation({name: _name.value, brand: _brand.value, price: _price.value, alcoholContent: _alcoholContent.value});
     _name.value = '';
     _brand.value = '';
     _price.value = '';
