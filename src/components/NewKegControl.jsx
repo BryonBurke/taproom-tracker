@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import ConfirmationQuestions from './ConfirmationQuestions';
 import NewKegForm from './NewKegForm';
 
@@ -20,7 +21,7 @@ handleAuthorizeConfirmation(){
 render(){
   let currentlyVisibleContent = null;
   if (this.state.formVisibleOnPage){
-    currentlyVisibleContent = <NewKegForm />;
+        currentlyVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation}/>;
   } else {
     currentlyVisibleContent = <ConfirmationQuestions onAuthorizeConfirmation={this.handleAuthorizeConfirmation}/>;
   }
@@ -31,5 +32,9 @@ render(){
   );
 }
 }
+
+NewKegControl.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
 
 export default NewKegControl;

@@ -1,14 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
-function NewKegForm(){
+
+function NewKegForm(props){
 
   let _name = null;
   let _brand = null;
   let _price = null;
   let _alcoholContent = null;
 
-  function handleNewTicketFormSubmission(event) {
+  function handleNewKegFormSubmission(event) {
     event.preventDefault();
+    props.onNewKegCreation({
+      name: _name.value,
+      brand: _brand.value,
+      price: _price.value,
+      alcoholContent: _alcoholContent.value,
+      id: v4()});
+
     _name.value = '';
     _brand.value = '';
     _price.value = '';
@@ -29,7 +39,7 @@ function NewKegForm(){
           placeholder='Brand'
           ref={(input) => {_brand = input;}}/>
         <input
-          type='number'
+          type='text'
           id='price'
           placeholder='Price'
           ref={(input) => {_price = input;}}/>
@@ -44,4 +54,7 @@ function NewKegForm(){
   );
 }
 
+NewKegForm.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
 export default NewKegForm;
