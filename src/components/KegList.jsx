@@ -1,6 +1,7 @@
 import React from 'react';
 import Keg from './Keg';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const columnHeadingStyles = {
   display: 'grid',
@@ -18,8 +19,14 @@ const headinglocationStyles = {
 
 
 function KegList(props){
+
+
   return (
     <div>
+      <ul>
+      <li><Link to="/newkeg">New Keg  </Link></li>
+      <li><Link to="/editkeg">Edit Keg  </Link></li>
+      </ul>
       <div style={columnHeadingStyles}>
         <p style={headinglocationStyles}>Name</p>
         <p style={headinglocationStyles}>Brand</p>
@@ -38,7 +45,7 @@ function KegList(props){
             currentRouterPath={props.currentRouterPath}
             key={keg.id}/>
         )}
-      
+
     </div>
   );
 }

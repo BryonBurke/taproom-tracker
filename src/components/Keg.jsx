@@ -24,6 +24,9 @@ function Keg(props){
       <h3 style={headinglocationStyles}>{props.price}</h3>
       <h3 style={headinglocationStyles}>{props.alcoholContent}</h3>
       <h3 style={headinglocationStyles}>{props.pintsRemaining}</h3>
+
+
+      
     </div>
   </div>
 
