@@ -68,7 +68,7 @@ function NewKegForm(props){
             id='pintsRemaining'
             placeholder='Pints Remaining'
             ref={(input) => {_pintsRemaining = input;}}/></li>
-          <button style={buttonStyle}type='submit'>New Keg</button>
+          <button style={buttonStyle}type='submit'>Add Keg</button>
         </form>
       </ul>
     </div>
