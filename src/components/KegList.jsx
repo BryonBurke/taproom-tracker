@@ -23,10 +23,7 @@ function KegList(props){
 
   return (
     <div>
-      <ul>
-      <li><Link to="/newkeg">New Keg  </Link></li>
-      <li><Link to="/editkeg">Edit Keg  </Link></li>
-      </ul>
+
       <div style={columnHeadingStyles}>
         <p style={headinglocationStyles}>Name</p>
         <p style={headinglocationStyles}>Brand</p>

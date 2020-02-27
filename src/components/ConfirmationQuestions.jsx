@@ -1,11 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const questionStyle =  {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  backgroundColor: '#a5e892',
+  textAlign: 'center',
+  paddingTop: '5vh',
+  fontFamily: 'Roboto',
+  color: 'black',
+  fontSize: '25px',
+
+}
+
+const buttonStyle =  {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  backgroundColor: '##1d77ab',
+  textAlign: 'center',
+  paddingTop: '5vh',
+  fontFamily: 'Roboto',
+  color: 'black',
+  fontSize: '25px',
+}
+
+
+
 function ConfirmationQuestions(props){
   return (
-    <div>
+    <div style={questionStyle}>
       <p>Are you authorzed to make changes to the Keg List?</p>
-      <button onClick={props.onAuthorizeConfirmation}>Yes</button>
+      <button style={buttonStyle} onClick={props.onAuthorizeConfirmation}>Yes</button>
     </div>
   );
 }

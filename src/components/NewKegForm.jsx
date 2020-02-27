@@ -2,6 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
+const buttonStyle =  {
+  display: 'grid',
+  backgroundColor: '##1d77ab',
+  textAlign: 'center',
+  paddingTop: '5vh',
+  fontFamily: 'Roboto',
+  color: 'black',
+  fontSize: '25px',
+}
+
 
 function NewKegForm(props){
 
@@ -30,34 +40,37 @@ function NewKegForm(props){
 
   return (
     <div>
-      <form onSubmit={handleNewKegFormSubmission}>
-        <input
-          type='text'
-          id='names'
-          placeholder='Name'
-          ref={(input) => {_name = input;}}/>
-        <input
-          type='text'
-          id='brand'
-          placeholder='Brand'
-          ref={(input) => {_brand = input;}}/>
-        <input
-          type='text'
-          id='price'
-          placeholder='Price'
-          ref={(input) => {_price = input;}}/>
-        <input
-          type='text'
-          id='alcoholContent'
-          placeholder='Alcohol Content'
-          ref={(input) => {_alcoholContent = input;}}/>
-        <input
-          type='number'
-          id='pintsRemaining'
-          placeholder='Pints Remaining'
-          ref={(input) => {_pintsRemaining = input;}}/>
-        <button type='submit'>Help!</button>
-      </form>
+      <ul>
+
+        <form onSubmit={handleNewKegFormSubmission}>
+          <li style={buttonStyle}><input
+            type='text'
+            id='names'
+            placeholder='Name'
+            ref={(input) => {_name = input;}}/></li>
+          <li style={buttonStyle}><input
+            type='text'
+            id='brand'
+            placeholder='Brand'
+            ref={(input) => {_brand = input;}}/></li>
+          <li style={buttonStyle}><input
+            type='text'
+            id='price'
+            placeholder='Price'
+            ref={(input) => {_price = input;}}/></li>
+          <li style={buttonStyle}><input
+            type='text'
+            id='alcoholContent'
+            placeholder='Alcohol Content'
+            ref={(input) => {_alcoholContent = input;}}/></li>
+          <li style={buttonStyle}><input
+            type='number'
+            id='pintsRemaining'
+            placeholder='Pints Remaining'
+            ref={(input) => {_pintsRemaining = input;}}/></li>
+          <button style={buttonStyle}type='submit'>New Keg</button>
+        </form>
+      </ul>
     </div>
   );
 }
