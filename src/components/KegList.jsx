@@ -36,8 +36,8 @@ function KegList(props){
           <Keg
             name={keg.name}
             brand={keg.brand}
-            price={keg.price}
-            alcoholContent={keg.alcoholContent}
+            price={"$"+keg.price}
+            alcoholContent= {keg.alcoholContent}
             pintsRemaining={keg.pintsRemaining}
             currentRouterPath={props.currentRouterPath}
             key={keg.id}/>

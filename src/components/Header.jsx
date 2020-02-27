@@ -8,7 +8,6 @@ function Header() {
     fontFamily: 'Roboto',
     color: 'white',
     textAlign: 'center',
-
   };
 
   const buttonStyle =  {
@@ -19,8 +18,6 @@ function Header() {
     color: 'white',
     textAlign: 'center',
     fontSize: '25px',
-
-
   }
 
   const navstyle ={
@@ -34,7 +31,6 @@ function Header() {
   padding: '2px',
   height: '19vh',
   width: '10vh',
-
   fontSize: '25px',
   textAlign: 'center',
   margin: '10'
