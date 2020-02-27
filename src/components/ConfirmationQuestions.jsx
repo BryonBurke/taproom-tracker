@@ -29,7 +29,7 @@ const buttonStyle =  {
 function ConfirmationQuestions(props){
   return (
     <div style={questionStyle}>
-      <p>Are you authorzed to make changes to the Keg List?</p>
+      <p>Are you authorized to make changes to the Keg List?</p>
       <button style={buttonStyle} onClick={props.onAuthorizeConfirmation}>Yes</button>
     </div>
   );
